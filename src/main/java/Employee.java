@@ -1,11 +1,15 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class Employee {
     private String firstName;
     private String lastName;
 
+
     // конструктор
-    public Employee(String firstName, String lastName, int departmentNumber,double salary) {
+    public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

@@ -2,6 +2,7 @@ package controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import service.EmployeeService;
 
@@ -16,18 +17,23 @@ public class EmployeeController {
     }
 
     @GetMapping("/add")
-    public String addEmployee() {
-        return employeeService.addEmployee();
+    public String addEmployee(@RequestParam String firstName,
+                              @RequestParam String lastName) {
+        return service.add(firstName,lastName);
     }
 
     @GetMapping("/remove")
-    public String removeEmployee() {
-        return employeeService.removeEmployee();
+    public String removeEmployee(@RequestParam String firstName,
+                                 @RequestParam String lastName) {
+        return service.remove(firstName,lastName);
     }
 
     @GetMapping("/find")
-    public String findEmployee() {
-        return employeeService.findEmployee();
+    public String findEmployee(@RequestParam String firstName,
+                               @RequestParam String lastName)  {
+        return service.find(firstName,lastName);
     }
-}
 
+    @GetMapping
+
+}
