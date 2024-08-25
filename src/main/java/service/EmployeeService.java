@@ -1,5 +1,8 @@
 package service;
-import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
 
 public class EmployeeService {
 
@@ -19,5 +22,4 @@ public String removeEmployee() {
 public String findEmployee() {
     return "дописать код поиска человека";
 }
-
 }
