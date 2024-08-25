@@ -19,5 +19,15 @@ public class EmployeeController {
     public String addEmployee() {
         return employeeService.addEmployee();
     }
+
+    @GetMapping("/remove")
+    public String removeEmployee() {
+        return employeeService.removeEmployee();
+    }
+
+    @GetMapping("/find")
+    public String findEmployee() {
+        return employeeService.findEmployee();
+    }
 }
 
