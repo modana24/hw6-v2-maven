@@ -1,7 +1,7 @@
 package service;
 
-import exception.EmployeeNotFoundException;
-import exception.exception.EmployeeAlreadyAddedException;
+import me.skypro_hw6v2.exception.EmployeeNotFoundException;
+import me.skypro_hw6v2.exception.exception.EmployeeAlreadyAddedException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

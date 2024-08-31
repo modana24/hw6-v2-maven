@@ -1,10 +1,11 @@
-package controller;
+package me.skypro_hw6v2.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import service.EmployeeService;
+import service.EmployeeServiceImpl;
 
 @RestController
 @RequestMapping("/employee")
@@ -33,7 +34,5 @@ public class EmployeeController {
                                @RequestParam String lastName)  {
         return service.find(firstName,lastName);
     }
-
-    @GetMapping
 
 }
