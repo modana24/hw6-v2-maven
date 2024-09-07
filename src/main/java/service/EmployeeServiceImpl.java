@@ -1,6 +1,7 @@
 package service;
 
-import me.skypro_hw6v2.exception.EmployeeNotFoundException;
+import me.skypro_hw6v2.Employee;
+import me.skypro_hw6v2.exception.exception.EmployeeNotFoundException;
 import me.skypro_hw6v2.exception.exception.EmployeeAlreadyAddedException;
 import org.springframework.stereotype.Service;
 
@@ -17,33 +18,33 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public String addEmployee() {
+    public Employee add(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
         if (employeeList.contains(employee)) {
             throw new EmployeeAlreadyAddedException();
         }
+        employeeList.add(employee);
         return employee;
     }
 
     @Override
-    public String removeEmployee() {
+    public Employee remove(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
         if (employeeList.contains(employee)) {
             employeeList.remove(employee);
             return employee;
         }
-        return throw new EmployeeNotFoundException();
+        throw new EmployeeNotFoundException();
     }
 
     @Override
-    public String findEmployee() {
+    public Employee find(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
         if (employeeList.contains(employee)) {
             return employee;
         }
-        return throw new EmployeeNotFoundException();
+        throw new EmployeeNotFoundException();
     }
-
 
 }
 

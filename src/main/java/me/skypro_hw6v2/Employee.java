@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package me.skypro_hw6v2;
+
 import java.util.Objects;
 
 public class Employee {
@@ -31,7 +30,7 @@ public class Employee {
     }
 
     public String etoString() {
-        return "Employee{" +
+        return "me.skypro_hw6v2.Employee{" +
                 "fullName='" + firstName + " " + lastName +
                 '}';
     }
