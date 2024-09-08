@@ -1,4 +1,4 @@
-package service;
+package me.skypro_hw6v2.service;
 
 import me.skypro_hw6v2.Employee;
 
