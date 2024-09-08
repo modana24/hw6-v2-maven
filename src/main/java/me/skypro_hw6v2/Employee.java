@@ -1,11 +1,14 @@
+package me.skypro_hw6v2;
+
 import java.util.Objects;
 
 public class Employee {
     private String firstName;
     private String lastName;
 
+
     // конструктор
-    public Employee(String firstName, String lastName, int departmentNumber,double salary) {
+    public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -27,8 +30,9 @@ public class Employee {
     }
 
     public String etoString() {
-        return "Employee{" +
+        return "me.skypro_hw6v2.Employee{" +
                 "fullName='" + firstName + " " + lastName +
                 '}';
     }
+
 }
