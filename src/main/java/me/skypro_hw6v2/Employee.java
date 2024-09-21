@@ -12,9 +12,17 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
     //геттеры
-    public String getFullName() { return firstName; }
-    public Employee(String lastName) { this.lastName = lastName; }
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
+
+    public Employee(String lastName) {
+        this.lastName = lastName;
+    }
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -31,7 +39,7 @@ public class Employee {
 
     public String etoString() {
         return "me.skypro_hw6v2.Employee{" +
-                "fullName='" + firstName + " " + lastName +
+                firstName + lastName +
                 '}';
     }
 
