@@ -5,12 +5,16 @@ import java.util.Objects;
 public class Employee {
     private String firstName;
     private String lastName;
+    private int departmentNumber;
+    private double salary;
 
 
     // конструктор
     public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.departmentNumber = departmentNumber;
+        this.salary = salary;
     }
 
     //геттеры
@@ -22,7 +26,22 @@ public class Employee {
         this.lastName = lastName;
     }
 
+    public int getDepartmentNumber() {
+        return departmentNumber;
+    }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    //сеттеры
+    public void setDepartmentNumber(int departmentNumber) {
+        this.departmentNumber = departmentNumber;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -32,15 +51,19 @@ public class Employee {
         return Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName);
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName);
     }
 
-    public String etoString() {
-        return "me.skypro_hw6v2.Employee{" +
-                firstName + lastName +
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", departmentNumber=" + departmentNumber +
+                ", salary=" + salary +
                 '}';
     }
-
 }

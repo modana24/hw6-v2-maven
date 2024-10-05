@@ -6,6 +6,7 @@ import me.skypro_hw6v2.exception.exception.EmployeeAlreadyAddedException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,5 +48,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         throw new EmployeeNotFoundException();
     }
 
-}
+    @Override
+    public Collections<Employee> findAll() {
+        return Collections.unmodifiableList(Employee);
+    }
 
+
+}
